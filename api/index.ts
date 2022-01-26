@@ -5,5 +5,5 @@ const notionApiToken = process.env.NOTION_API_TOKEN
 
 export default function (req: VercelRequest, res: VercelResponse) {
     const { name = 'World' } = req.query;
-    res.send(`Hello ${name}!`);
+    res.send(`Hello ${notionApiToken}!`);
 }
