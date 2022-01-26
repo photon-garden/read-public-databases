@@ -6,9 +6,11 @@ const Notion = new Client({ auth: process.env.NOTION_API_TOKEN })
 
 async function getDataFromDatabase(req: VercelRequest, res: VercelResponse) {
     const databaseId = req.query.databaseId as string
+    const startCursor = req.query['start-cursor'] as string
 
     const response = await Notion.databases.query({
         database_id: databaseId,
+        start_cursor: startCursor
     })
 
     const json = JSON.stringify(response, undefined, 2)
