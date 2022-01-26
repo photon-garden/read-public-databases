@@ -1,0 +1,15 @@
+{
+  "name": "public-notion-databases",
+  "version": "0.0.1",
+  "description": "A proxy that lets you load data from a public Notion database from the browser.",
+  "main": "index.js",
+  "author": "@photon_garden",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "@vercel/node": "^1.12.1"
+  }
+}
